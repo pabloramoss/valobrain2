@@ -8,10 +8,17 @@ import "swiper/css/navigation";
 
 // import required modules
 import {Pagination, Navigation} from "swiper";
+import React from "react";
+import styled from "styled-components";
 
-export default function App() {
+const Wrapper = styled.div`
+  height: 300px;
+  width: 800px;
+`;
+
+export const Carousel: React.FC = () => {
   return (
-    <>
+    <Wrapper>
       <Swiper
         className="mySwiper"
         loop={true}
@@ -36,6 +43,6 @@ export default function App() {
         <SwiperSlide>Slide 9</SwiperSlide>
         <SwiperSlide>Slide 10</SwiperSlide>
       </Swiper>
-    </>
+    </Wrapper>
   );
-}
+};
