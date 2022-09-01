@@ -5,6 +5,7 @@ import Head from "next/head";
 import Sidebar from "../components/sections/Sidebar/Sidebar";
 import styles from "../styles/Home.module.css";
 import {Carousel} from "../components/sections/Carousel";
+import Navbar from "../components/Navbar/Navbar";
 
 const Home: NextPage = () => {
   return (
@@ -15,10 +16,12 @@ const Home: NextPage = () => {
         <link href="/favicon.ico" rel="icon" />
       </Head>
 
-      <main style={{display: "flex"}}>
-        {/* <Navbar /> */}
-        <Sidebar />
-        <Carousel />
+      <main style={{display: "flex", flexDirection: "column"}}>
+        <Navbar />
+        <div style={{display: "flex"}}>
+          <Sidebar />
+          <Carousel />
+        </div>
         {/* <MainContent>
           <Hero />
           <CarouselMaps />
