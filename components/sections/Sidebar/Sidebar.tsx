@@ -146,7 +146,7 @@ const MenuItem = styled.div`
   }
 `;
 
-const Sidebar: React.FC = () => {
+export const Sidebar: React.FC = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -237,5 +237,3 @@ const Sidebar: React.FC = () => {
     </SidebarContainer>
   );
 };
-
-export default Sidebar;
