@@ -1,6 +1,14 @@
 import {useState} from "react";
 import styled from "styled-components";
-import {FaBars, FaHome, FaEnvelope, FaTiktok, FaYoutube, FaDotCircle} from "react-icons/fa";
+import {
+  FaBars,
+  FaHome,
+  FaEnvelope,
+  FaTiktok,
+  FaYoutube,
+  FaDotCircle,
+  FaArrowRight,
+} from "react-icons/fa";
 
 interface SidebarContainerProps {
   isOpen: boolean;
@@ -109,6 +117,78 @@ const SidebarContainer = styled.div<SidebarContainerProps>`
   .closed {
     opacity: 0;
   }
+
+  .nav {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0px 10px var(--clr-gray300);
+    height: 100vh;
+  
+    &__expand {
+      width: 2rem;
+      heigtht: 2rem;
+      fill: var(--clr-gray400);
+      background-color: white;
+      box-shadow: 0px 0px 10px var(--clr-gray300);
+      border-radius: 50%;
+      position: absolute;
+      right: -1rem;
+      top: 1rem;
+      z-index: 99;
+      cursor: pointer;
+      transform: rotatez(-180deg);
+      transition: transform 200ms ease-in-out;
+  
+      &:hover {
+        fill: var(--clr-gray500);
+      }
+    }
+  
+    &__list {
+      display: flex;
+      flex-direction: column;
+  
+      &item {
+        list-style: none;
+        transition: all 200ms ease-in;
+        padding: 1rem 1.5rem;
+        border-left: 6px solid transparent;
+        cursor: pointer;
+  
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+  
+        &:hover {
+          background-color: var(--clr-gray150);
+        }
+  
+        a {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          color: var(--clr-gray400);
+          text-decoration: none;
+          font-weight: 500;
+        }
+  
+        svg {
+          fill: var(--clr-gray400);
+          width: 2rem;
+        }
+  
+        &-active {
+          background-color: var(--clr-gray200);
+          border-left: 6px solid var(--clr-primary);
+  
+          svg,
+          p {
+            color: var(--clr-primary);
+            fill: var(--clr-primary);
+          }
+        }
+      }
+    }
 `;
 
 const MenuItem = styled.div`
@@ -160,80 +240,38 @@ export const Sidebar: React.FC = () => {
 
   return (
     <SidebarContainer isOpen={sidebarIsOpen}>
-      {/* <FaBars size={25} onClick={toggleSidebar} />
-      <div className="div-container">
-        <div>
-          <span className="span-container">
-            <a className="a-wrapper">
-              <div className="div-wrapper">
-                <div className="icon-div">
-                  <span className="span-wrapper icon-span">
-                    <span className="icon-span" />
-                    <FaHome className="icon" size={25} />
-                  </span>
-                </div>
-                <p>home</p>
-              </div>
+      <nav className="nav">
+        <svg className="nav__expand" viewBox="0 0 256 512" width="100" onClick={toggleSidebar}>
+          <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+        </svg>
+
+        <ul className="nav__list">
+          <li className="nav__listitem">
+            <a href="#">
+              <FaHome size={30} />
+              <p>Home</p>
             </a>
-          </span>
-        </div>
-      </div>
-      <div>
-        <p>tiktok</p>
-        <p>youtube</p>
-      </div>
-      <footer>valobrain</footer> */}
-      <MenuItem>
-        <FaBars size={25} onClick={toggleSidebar} />
-      </MenuItem>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "space-between",
-          height: "100%",
-          width: "100%",
-          justifyContent: "space-between",
-          marginBottom: "10rem",
-        }}
-      >
-        <div style={{display: "flex", flexDirection: "column", width: "100%", gap: "2rem"}}>
-          <MenuItem>
-            <div style={{flexShrink: "0", display: "flex"}}>
-              <FaHome className="icon" size={25} />
-            </div>
-            <p className={sidebarIsOpen ? "" : "closed"}>Inicio</p>
-          </MenuItem>
-          <MenuItem>
-            <div style={{flexShrink: "0", display: "flex"}}>
-              <FaEnvelope size={25} />
-            </div>
-            <p className={sidebarIsOpen ? "" : "closed"}>Envia tu micro</p>
-          </MenuItem>
-        </div>
-        <div style={{display: "flex", flexDirection: "column", width: "100%", gap: "2rem"}}>
-          <MenuItem>
-            <div style={{flexShrink: "0", display: "flex"}}>
-              {" "}
-              <FaTiktok size={20} />
-            </div>
-            <p className={sidebarIsOpen ? "" : "closed"}>Tiktok</p>
-          </MenuItem>
-          <MenuItem>
-            <div style={{flexShrink: "0", display: "flex"}}>
-              <FaYoutube size={20} />
-            </div>
-            <p className={sidebarIsOpen ? "" : "closed"}>Youtube</p>
-          </MenuItem>
-        </div>
-        <div style={{position: "absolute", bottom: "0"}}>
-          {sidebarIsOpen ? (
-            <p style={{color: "lightgrey"}}>© {new Date().getFullYear()} Valobrain</p>
-          ) : (
-            <></>
-          )}
-        </div>
-      </div>
+          </li>
+          <li className="nav__listitem nav__listitem-active">
+            <a href="#">
+              <FaEnvelope size={30} />
+              <p>Analytics</p>
+            </a>
+          </li>
+          <li className="nav__listitem">
+            <a href="#">
+              <FaTiktok size={30} />
+              <p>Tiktok</p>
+            </a>
+          </li>
+          <li className="nav__listitem">
+            <a href="#">
+              <FaYoutube size={30} />
+              <p>Messages</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </SidebarContainer>
   );
 };
