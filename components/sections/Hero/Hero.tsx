@@ -1,9 +1,9 @@
 import {FaSearch} from "react-icons/fa";
 import styled from "styled-components";
+import Image from "next/image";
 
 const SearchbarContainer = styled.div`
   display: flex;
-  max-width: 600px;
   justify-content: space-between;
   align-items: center;
   background: white;
@@ -23,7 +23,7 @@ const SearchbarContainer = styled.div`
   }
   .divider {
     border-left: 1px solid #f7f7f7;
-    height: 100%;
+    height: 30px;
   }
 
   .icon-searchbar {
@@ -31,13 +31,22 @@ const SearchbarContainer = styled.div`
   }
 `;
 
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+`;
+
 export const Hero: React.FC = () => {
   return (
-    <div>
-      <h1>VALOBRAIN</h1>
-      <h6>Micro strats for Valorant</h6>
+    <div style={{display: "flex", flexDirection: "column"}}>
+      <TitleContainer>
+        <h1>VALOBRAIN</h1>
+        <h4>Micro strats for Valorant</h4>
+      </TitleContainer>
       <SearchbarContainer>
-        <img alt="valobrain logo searchbar" className="icon-searchbar" src="valorant-icon.svg" />
+        <img alt="valobrain logo searchbar" className="icon-searchbar" src="/valorant-icon.svg" />
         <div className="divider" />
         <input placeholder="Busca la micro strat" />
         <FaSearch className="icon-searchbar" color="grey" size={25} />
@@ -46,8 +55,3 @@ export const Hero: React.FC = () => {
     </div>
   );
 };
-
-//::placeholder {
-//   color: blue;
-//   font-size: 1.5em;
-// }

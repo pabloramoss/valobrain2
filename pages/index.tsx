@@ -20,8 +20,8 @@ const Home: NextPage = () => {
       <main style={{display: "flex", flexDirection: "column"}}>
         <Navbar />
         <div style={{display: "flex"}}>
-          <Sidebar />
-          <div>
+          {/* <Sidebar /> */}
+          <div style={{width: "700px"}}>
             <Hero />
             <Carousel />
           </div>
