@@ -7,8 +7,9 @@ import {Carousel} from "../components/sections/Carousel";
 import {Sidebar} from "../components/sections/Sidebar";
 import {Navbar} from "../components/Navbar";
 import {Hero} from "../components/sections/Hero";
+import {Maps} from "../components/Maps";
 
-const Home: NextPage = () => {
+const MicroStrats: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -29,8 +30,7 @@ const Home: NextPage = () => {
         <div style={{display: "flex"}}>
           {/* <Sidebar /> */}
           <div style={{width: "700px"}}>
-            <Hero />
-            <Carousel />
+            <Maps />
           </div>
         </div>
         {/* <MainContent>
@@ -43,4 +43,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default MicroStrats;

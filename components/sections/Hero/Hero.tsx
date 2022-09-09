@@ -4,11 +4,11 @@ import Image from "next/image";
 
 const SearchbarContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background: white;
   border-radius: 10px;
   padding: 10px 0;
+
   input {
     width: 100%;
     border: none;
@@ -51,7 +51,6 @@ export const Hero: React.FC = () => {
         <input placeholder="Busca la micro strat" />
         <FaSearch className="icon-searchbar" color="grey" size={25} />
       </SearchbarContainer>
-      {`<Searchbar />`}
     </div>
   );
 };
