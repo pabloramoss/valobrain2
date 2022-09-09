@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <Navbar />
         <div style={{display: "flex"}}>
           {/* <Sidebar /> */}
-          <div style={{width: "700px"}}>
+          <div style={{maxWidth: "700px"}}>
             <Hero />
             <Carousel />
           </div>
