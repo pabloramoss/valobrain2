@@ -11,14 +11,11 @@ export const contentStyle = {
     padding: "8px 16px",
     flexGrow: 1,
   },
-  left: {left: "-8px"},
+  left: {left: "0px"},
   textLeft: {textAlign: "left"},
   right: {right: "-8px"},
   textRight: {textAlign: "right"},
   handle: {
-    widht: "10px", // Does not work
-    height: "10px",
-    margin: "auto",
     background: "#ddd",
     borderRadius: "15px",
     border: "2px solid #ddd",

@@ -14,13 +14,13 @@ const DefaultNode = ({data, selected}) => {
           {"Default"}
           <Handle
             id="o__data"
-            position={Position.Right}
+            position={Position.Left}
             style={{...style.handle, ...style.right}}
             type="target"
           />
           <Handle
             id="o__data"
-            position={Position.Left}
+            position={Position.Right}
             style={{...style.handle, ...style.right}}
             type="source"
           />
