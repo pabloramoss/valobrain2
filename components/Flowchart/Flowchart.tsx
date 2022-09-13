@@ -11,12 +11,13 @@ import ReactFlow, {
 } from "react-flow-renderer";
 
 import SourceNode from "./CustomNodes/SourceNode";
+import DefaultNode from "./CustomNodes/DefaultNode";
+import TargetNode from "./CustomNodes/TargetNode";
 
 const nodeTypes = {
   sourceNode: SourceNode,
-  // dataNode: DataNode,
-  // functionNode: FunctionNode,
-  // valueNode: ValueNode
+  targetNode: TargetNode,
+  defaultNode: DefaultNode,
 };
 
 const initialNodes = [
@@ -29,14 +30,14 @@ const initialNodes = [
 
   {
     id: "2",
-    type: "sourceNode",
-    data: {label: <div>Default Node</div>},
+    type: "targetNode",
+    data: {label: <div>Target Node</div>},
     position: {x: 100, y: 125},
   },
   {
     id: "3",
-    type: "sourceNode",
-    data: {label: "Output Node"},
+    type: "defaultNode",
+    data: {label: "Default Node"},
     position: {x: 250, y: 250},
   },
 ];

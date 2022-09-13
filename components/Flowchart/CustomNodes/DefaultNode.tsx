@@ -4,17 +4,23 @@ import {Handle, Position} from "react-flow-renderer";
 import Node, {contentStyle as style} from "./Node";
 
 // @ts-ignore
-const SourceNode = ({data, selected}) => {
+const DefaultNode = ({data, selected}) => {
   return (
     <Node
       color={"LemonChiffon"}
       content={
         // @ts-ignore
         <div style={style.io}>
-          {"Source"}
+          {"Default"}
           <Handle
             id="o__data"
             position={Position.Right}
+            style={{...style.handle, ...style.right}}
+            type="target"
+          />
+          <Handle
+            id="o__data"
+            position={Position.Left}
             style={{...style.handle, ...style.right}}
             type="source"
           />
@@ -26,4 +32,4 @@ const SourceNode = ({data, selected}) => {
   );
 };
 
-export default memo(SourceNode);
+export default memo(DefaultNode);
