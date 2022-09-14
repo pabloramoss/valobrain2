@@ -1,3 +1,4 @@
+import React, {useState} from "react";
 import {FaSearch} from "react-icons/fa";
 import styled from "styled-components";
 const SearchbarContainer = styled.div`
@@ -30,11 +31,16 @@ const SearchbarContainer = styled.div`
 `;
 
 export const Searchbar: React.FC = () => {
+  const [query, setQuery] = useState("");
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(event.target.value);
+  };
+
   return (
     <SearchbarContainer>
       <img alt="valobrain logo searchbar" className="icon-searchbar" src="/valorant-icon.svg" />
       <div className="divider" />
-      <input placeholder="Busca la micro strat" />
+      <input placeholder="Busca la micro strat" onChange={handleChange} />
       <FaSearch className="icon-searchbar" color="grey" size={25} />
     </SearchbarContainer>
   );

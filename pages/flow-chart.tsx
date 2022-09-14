@@ -26,7 +26,6 @@ const FlowChart: NextPage = () => {
   };
 
   const handleOnBlur = () => {
-    //@ts-ignore
     setIsEditable(false);
   };
 
