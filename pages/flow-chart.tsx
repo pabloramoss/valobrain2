@@ -5,6 +5,7 @@ import React, {useRef, useState} from "react";
 
 import styles from "../styles/Home.module.css";
 import {Flowchart} from "../components/Flowchart";
+import {Navbar} from "../components/Navbar";
 
 const FlowChart: NextPage = () => {
   const [isEditable, setIsEditable] = useState(false);
@@ -30,38 +31,41 @@ const FlowChart: NextPage = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Valobrain</title>
-        <meta content="Valorant Strat App" name="Valobrain" />
-        <link href="/favicon.ico" rel="icon" />
-      </Head>
+    <div>
+      <Navbar />
+      <div className={styles.container}>
+        <Head>
+          <title>Valobrain</title>
+          <meta content="Valorant Strat App" name="Valobrain" />
+          <link href="/favicon.ico" rel="icon" />
+        </Head>
 
-      <main
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-          width: "100vw",
-        }}
-      >
-        <div>
-          <h3>isEditable {JSON.stringify(isEditable)}</h3>
-          <input
-            ref={ref}
-            placeholder="apretame"
-            readOnly={!isEditable}
-            onBlur={handleOnBlur}
-            onClick={handleEdit}
-          />
-          <button ref={refButton} id="buttoncito" onClick={() => setIsEditable(!isEditable)}>
-            hola
-          </button>
-        </div>
-        <Flowchart />
-      </main>
+        <main
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh",
+            width: "100vw",
+          }}
+        >
+          <div>
+            <h3>isEditable {JSON.stringify(isEditable)}</h3>
+            <input
+              ref={ref}
+              placeholder="apretame"
+              readOnly={!isEditable}
+              onBlur={handleOnBlur}
+              onClick={handleEdit}
+            />
+            <button ref={refButton} id="buttoncito" onClick={() => setIsEditable(!isEditable)}>
+              hola
+            </button>
+          </div>
+          <Flowchart />
+        </main>
+      </div>
     </div>
   );
 };
