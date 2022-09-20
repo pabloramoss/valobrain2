@@ -36,6 +36,10 @@ export const Searchbar: React.FC = () => {
     setQuery(event.target.value);
   };
 
+  const handleSubmit = () => {
+    //api call with query
+  };
+
   return (
     <SearchbarContainer>
       <img alt="valobrain logo searchbar" className="icon-searchbar" src="/valorant-icon.svg" />
