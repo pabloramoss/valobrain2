@@ -227,7 +227,7 @@ const MenuItem = styled.div`
 `;
 
 export const Sidebar: React.FC = () => {
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(true);
 
   const toggleSidebar = () => {
     setSidebarIsOpen(!sidebarIsOpen);
@@ -240,11 +240,191 @@ export const Sidebar: React.FC = () => {
 
   return (
     <SidebarContainer isOpen={sidebarIsOpen}>
-      <nav className="nav">
-        <svg className="nav__expand" viewBox="0 0 256 512" width="100" onClick={toggleSidebar}>
+      <nav className="nav" style={{position: "relative"}}>
+        <FaArrowRight
+          size={15}
+          style={{
+            zIndex: "300",
+            position: "absolute",
+            top: "0",
+            right: "0",
+            borderRadius: "99999px",
+            cursor: "pointer",
+            border: "1px solid lightgrey",
+            boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, 0.1)",
+            padding: "4px",
+          }}
+          onClick={toggleSidebar}
+        />
+        {/* <svg
+          className="nav__expand"
+          height="40px"
+          style={{
+            zIndex: "300",
+            position: "absolute",
+            top: "0",
+            right: "0",
+            background: "grey",
+            borderRadius: "99999px",
+          }}
+          viewBox="0 0 256 512"
+          width="40px"
+          onClick={toggleSidebar}
+        >
           <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
-        </svg>
-
+        </svg> */}
+        <ul
+          style={{
+            listStyleType: "none",
+            overflow: "hidden",
+            flexShrink: "0",
+            justifyContent: "center",
+            justifySelf: "start",
+            display: "flex",
+            flexDirection: "column",
+            padding: "0 20px",
+          }}
+        >
+          <li
+            style={{
+              flexShrink: "0",
+              overflow: "hidden",
+              display: "flex",
+            }}
+          >
+            <a
+              href=""
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                textDecoration: "none",
+                overflow: "hidden",
+                flexShrink: "0",
+                justifyContent: "start",
+              }}
+            >
+              <FaHome size={30} />
+              <p style={{fontWeight: "600"}}>Home</p>
+            </a>
+          </li>
+          <li
+            style={{
+              flexShrink: "0",
+              overflow: "hidden",
+              display: "flex",
+            }}
+          >
+            <a
+              href=""
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                textDecoration: "none",
+                overflow: "hidden",
+                flexShrink: "0",
+                justifyContent: "start",
+              }}
+            >
+              <FaEnvelope size={30} />
+              <p style={{fontWeight: "600"}}>Analytics</p>
+            </a>
+          </li>
+          <li
+            style={{
+              flexShrink: "0",
+              overflow: "hidden",
+              display: "flex",
+            }}
+          >
+            <a
+              href=""
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                textDecoration: "none",
+                overflow: "hidden",
+                flexShrink: "0",
+                justifyContent: "start",
+              }}
+            >
+              <FaEnvelope size={30} />
+              <p style={{fontWeight: "600"}}>Sens calculator</p>
+            </a>
+          </li>
+          <li
+            style={{
+              flexShrink: "0",
+              overflow: "hidden",
+              display: "flex",
+            }}
+          >
+            <a
+              href=""
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                textDecoration: "none",
+                overflow: "hidden",
+                flexShrink: "0",
+                justifyContent: "start",
+              }}
+            >
+              <FaEnvelope size={30} />
+              <p style={{fontWeight: "600"}}>Flow chart</p>
+            </a>
+          </li>
+          <li
+            style={{
+              flexShrink: "0",
+              overflow: "hidden",
+              display: "flex",
+            }}
+          >
+            <a
+              href=""
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                textDecoration: "none",
+                overflow: "hidden",
+                flexShrink: "0",
+                justifyContent: "start",
+              }}
+            >
+              <FaTiktok size={30} />
+              <p style={{fontWeight: "600"}}>Tiktok</p>
+            </a>
+          </li>
+          <li
+            style={{
+              flexShrink: "0",
+              overflow: "hidden",
+              display: "flex",
+            }}
+          >
+            <a
+              href=""
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                textDecoration: "none",
+                overflow: "hidden",
+                flexShrink: "0",
+                justifyContent: "start",
+              }}
+            >
+              <FaYoutube size={30} />
+              <p style={{fontWeight: "600"}}>Youtube</p>
+            </a>
+          </li>
+        </ul>
+        {/* 
         <ul className="nav__list">
           <li className="nav__listitem">
             <a href="#">
@@ -270,7 +450,7 @@ export const Sidebar: React.FC = () => {
               <p>Messages</p>
             </a>
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </SidebarContainer>
   );
