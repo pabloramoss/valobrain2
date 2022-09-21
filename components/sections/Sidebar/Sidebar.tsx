@@ -9,6 +9,7 @@ import {
   FaDotCircle,
   FaArrowRight,
 } from "react-icons/fa";
+import Link from "next/link";
 
 interface SidebarContainerProps {
   isOpen: boolean;
@@ -19,13 +20,13 @@ const SidebarContainer = styled.div<SidebarContainerProps>`
   position: fixed;
   top: 0;
   left: 0;
-  background: grey;
   width: ${(p) => (p.isOpen ? "200px" : "70px")};
   display: flex;
   flex-direction: column;
   transition: 0.6s;
   overflow: hidden;
-  padding-top: 2rem;
+  background: #1A202C;
+  color: white;
 
   .icon {
     position: absolute;
@@ -120,7 +121,6 @@ const SidebarContainer = styled.div<SidebarContainerProps>`
 
   .nav {
     position: absolute;
-    background-color: white;
     box-shadow: 0px 0px 10px var(--clr-gray300);
     height: 100vh;
   
@@ -128,7 +128,6 @@ const SidebarContainer = styled.div<SidebarContainerProps>`
       width: 2rem;
       heigtht: 2rem;
       fill: var(--clr-gray400);
-      background-color: white;
       box-shadow: 0px 0px 10px var(--clr-gray300);
       border-radius: 50%;
       position: absolute;
@@ -240,6 +239,20 @@ export const Sidebar: React.FC = () => {
 
   return (
     <SidebarContainer isOpen={sidebarIsOpen}>
+      <div
+        style={{
+          listStyleType: "none",
+          overflow: "hidden",
+          justifyContent: "start",
+          display: "flex",
+          padding: "0 20px",
+          alignItems: "center",
+          gap: "24px",
+        }}
+      >
+        <img height={30} src="https://via.placeholder.com/30" />
+        <h2>Valobrain</h2>
+      </div>
       <nav className="nav" style={{position: "relative"}}>
         <FaArrowRight
           size={15}
@@ -292,21 +305,24 @@ export const Sidebar: React.FC = () => {
               display: "flex",
             }}
           >
-            <a
-              href=""
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                textDecoration: "none",
-                overflow: "hidden",
-                flexShrink: "0",
-                justifyContent: "start",
-              }}
-            >
-              <FaHome size={30} />
-              <p style={{fontWeight: "600"}}>Home</p>
-            </a>
+            <Link href="">
+              <a
+                href=""
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  textDecoration: "none",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                  justifyContent: "start",
+                  color: "white",
+                }}
+              >
+                <FaHome size={30} />
+                <p style={{fontWeight: "600"}}>Home</p>
+              </a>
+            </Link>
           </li>
           <li
             style={{
@@ -325,6 +341,7 @@ export const Sidebar: React.FC = () => {
                 overflow: "hidden",
                 flexShrink: "0",
                 justifyContent: "start",
+                color: "white",
               }}
             >
               <FaEnvelope size={30} />
@@ -338,21 +355,50 @@ export const Sidebar: React.FC = () => {
               display: "flex",
             }}
           >
-            <a
-              href=""
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                textDecoration: "none",
-                overflow: "hidden",
-                flexShrink: "0",
-                justifyContent: "start",
-              }}
-            >
-              <FaEnvelope size={30} />
-              <p style={{fontWeight: "600"}}>Sens calculator</p>
-            </a>
+            <Link href="/sens-calculator">
+              <a
+                href=""
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  textDecoration: "none",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                  justifyContent: "start",
+                  color: "white",
+                }}
+              >
+                <FaEnvelope size={30} />
+                <p style={{fontWeight: "600"}}>Sens calculator</p>
+              </a>
+            </Link>
+          </li>
+          <li
+            style={{
+              flexShrink: "0",
+              overflow: "hidden",
+              display: "flex",
+            }}
+          >
+            <Link href="/flow-chart">
+              <a
+                href=""
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  textDecoration: "none",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                  justifyContent: "start",
+                  color: "white",
+                }}
+              >
+                <FaEnvelope size={30} />
+                <p style={{fontWeight: "600"}}>Flow chart</p>
+              </a>
+            </Link>
           </li>
           <li
             style={{
@@ -371,30 +417,9 @@ export const Sidebar: React.FC = () => {
                 overflow: "hidden",
                 flexShrink: "0",
                 justifyContent: "start",
+                color: "white",
               }}
-            >
-              <FaEnvelope size={30} />
-              <p style={{fontWeight: "600"}}>Flow chart</p>
-            </a>
-          </li>
-          <li
-            style={{
-              flexShrink: "0",
-              overflow: "hidden",
-              display: "flex",
-            }}
-          >
-            <a
-              href=""
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                textDecoration: "none",
-                overflow: "hidden",
-                flexShrink: "0",
-                justifyContent: "start",
-              }}
+              target="_blank"
             >
               <FaTiktok size={30} />
               <p style={{fontWeight: "600"}}>Tiktok</p>
@@ -417,7 +442,9 @@ export const Sidebar: React.FC = () => {
                 overflow: "hidden",
                 flexShrink: "0",
                 justifyContent: "start",
+                color: "white",
               }}
+              target="_blank"
             >
               <FaYoutube size={30} />
               <p style={{fontWeight: "600"}}>Youtube</p>

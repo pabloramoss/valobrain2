@@ -23,6 +23,8 @@ const Home: NextPage = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          background: "#2D3748",
+          height: "100vh",
         }}
       >
         <Navbar />
