@@ -1,8 +1,6 @@
 import {NextPage} from "next";
 import React, {useState} from "react";
 
-import {Navbar} from "../components/Navbar";
-
 const lowerHigherSens = (averageSens: number) => {
   const higherSens = averageSens * 1.5;
   const lowerSens = averageSens * 0.5;
@@ -33,7 +31,6 @@ const SensCalculator: NextPage = () => {
 
   return (
     <div>
-      <Navbar />
       <div style={{display: "flex", flexDirection: "column"}}>
         <div style={{display: "flex", gap: "8px"}}>
           <label>Starting sensitivity:</label>

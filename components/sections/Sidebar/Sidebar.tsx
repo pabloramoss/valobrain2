@@ -1,13 +1,14 @@
 import {useState} from "react";
 import styled from "styled-components";
 import {
-  FaBars,
   FaHome,
   FaEnvelope,
   FaTiktok,
   FaYoutube,
-  FaDotCircle,
   FaArrowRight,
+  FaCalculator,
+  FaProjectDiagram,
+  FaTv,
 } from "react-icons/fa";
 import Link from "next/link";
 
@@ -323,22 +324,24 @@ export const Sidebar: React.FC = () => {
                 display: "flex",
               }}
             >
-              <a
-                href=""
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  textDecoration: "none",
-                  overflow: "hidden",
-                  flexShrink: "0",
-                  justifyContent: "start",
-                  color: "white",
-                }}
-              >
-                <FaEnvelope size={30} />
-                <p style={{fontWeight: "600"}}>Analytics</p>
-              </a>
+              <Link href="/micro-strats">
+                <a
+                  href=""
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    textDecoration: "none",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                    justifyContent: "start",
+                    color: "white",
+                  }}
+                >
+                  <FaTv size={30} />
+                  <p style={{fontWeight: "600"}}>Micro strats</p>
+                </a>
+              </Link>
             </li>
             <li
               style={{
@@ -361,7 +364,7 @@ export const Sidebar: React.FC = () => {
                     color: "white",
                   }}
                 >
-                  <FaEnvelope size={30} />
+                  <FaCalculator size={30} />
                   <p style={{fontWeight: "600"}}>Sens calculator</p>
                 </a>
               </Link>
@@ -387,10 +390,34 @@ export const Sidebar: React.FC = () => {
                     color: "white",
                   }}
                 >
-                  <FaEnvelope size={30} />
+                  <FaProjectDiagram size={30} />
                   <p style={{fontWeight: "600"}}>Flow chart</p>
                 </a>
               </Link>
+            </li>
+            <li
+              style={{
+                flexShrink: "0",
+                overflow: "hidden",
+                display: "flex",
+              }}
+            >
+              <a
+                href=""
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  textDecoration: "none",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                  justifyContent: "start",
+                  color: "white",
+                }}
+              >
+                <FaEnvelope size={30} />
+                <p style={{fontWeight: "600"}}>Support</p>
+              </a>
             </li>
           </ul>
           <ul
@@ -413,7 +440,7 @@ export const Sidebar: React.FC = () => {
               }}
             >
               <a
-                href=""
+                href="www.youtube.com/channel/UCjg1YvYLP3KbPPdEZ57GJuA"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -438,7 +465,7 @@ export const Sidebar: React.FC = () => {
               }}
             >
               <a
-                href=""
+                href="www.tiktok.com/@valobrain"
                 style={{
                   display: "flex",
                   alignItems: "center",

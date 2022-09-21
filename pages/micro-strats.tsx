@@ -5,7 +5,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import {Carousel} from "../components/sections/Carousel";
 import {Sidebar} from "../components/sections/Sidebar";
-import {Navbar} from "../components/Navbar";
 import {Hero} from "../components/sections/Hero";
 import {Maps} from "../components/Maps";
 
@@ -26,7 +25,6 @@ const MicroStrats: NextPage = () => {
           alignItems: "center",
         }}
       >
-        <Navbar />
         <div style={{display: "flex"}}>
           {/* <Sidebar /> */}
           <div style={{width: "700px"}}>

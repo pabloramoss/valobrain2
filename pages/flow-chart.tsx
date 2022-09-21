@@ -5,7 +5,6 @@ import React, {useRef, useState} from "react";
 
 import styles from "../styles/Home.module.css";
 import {Flowchart} from "../components/Flowchart";
-import {Navbar} from "../components/Navbar";
 
 const FlowChart: NextPage = () => {
   const [isEditable, setIsEditable] = useState(false);
@@ -32,7 +31,6 @@ const FlowChart: NextPage = () => {
 
   return (
     <div>
-      <Navbar />
       <div className={styles.container}>
         <Head>
           <title>Valobrain</title>
