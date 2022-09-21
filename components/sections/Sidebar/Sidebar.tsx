@@ -27,6 +27,7 @@ const SidebarContainer = styled.div<SidebarContainerProps>`
   overflow: hidden;
   background: #1A202C;
   color: white;
+  box-shadow: 10px 0 20px rgb(0 0 0 / 25%);
 
   .icon {
     position: absolute;
@@ -250,7 +251,7 @@ export const Sidebar: React.FC = () => {
           gap: "24px",
         }}
       >
-        <img height={30} src="https://via.placeholder.com/30" />
+        <img alt="valobrain logo" height={30} src="https://via.placeholder.com/30" />
         <h2>Valobrain</h2>
       </div>
       <nav className="nav" style={{position: "relative"}}>
@@ -269,119 +270,59 @@ export const Sidebar: React.FC = () => {
           }}
           onClick={toggleSidebar}
         />
-        {/* <svg
-          className="nav__expand"
-          height="40px"
+        <div
           style={{
-            zIndex: "300",
-            position: "absolute",
-            top: "0",
-            right: "0",
-            background: "grey",
-            borderRadius: "99999px",
-          }}
-          viewBox="0 0 256 512"
-          width="40px"
-          onClick={toggleSidebar}
-        >
-          <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
-        </svg> */}
-        <ul
-          style={{
-            listStyleType: "none",
-            overflow: "hidden",
-            flexShrink: "0",
-            justifyContent: "center",
-            justifySelf: "start",
             display: "flex",
             flexDirection: "column",
-            padding: "0 20px",
+            justifyContent: "space-between",
+            height: "100%",
           }}
         >
-          <li
+          <ul
             style={{
-              flexShrink: "0",
+              listStyleType: "none",
               overflow: "hidden",
+              flexShrink: "0",
+              justifyContent: "center",
+              justifySelf: "start",
               display: "flex",
+              flexDirection: "column",
+              padding: "0 20px",
             }}
           >
-            <Link href="">
-              <a
-                href=""
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  textDecoration: "none",
-                  overflow: "hidden",
-                  flexShrink: "0",
-                  justifyContent: "start",
-                  color: "white",
-                }}
-              >
-                <FaHome size={30} />
-                <p style={{fontWeight: "600"}}>Home</p>
-              </a>
-            </Link>
-          </li>
-          <li
-            style={{
-              flexShrink: "0",
-              overflow: "hidden",
-              display: "flex",
-            }}
-          >
-            <a
-              href=""
+            <li
               style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                textDecoration: "none",
-                overflow: "hidden",
                 flexShrink: "0",
-                justifyContent: "start",
-                color: "white",
+                overflow: "hidden",
+                display: "flex",
               }}
             >
-              <FaEnvelope size={30} />
-              <p style={{fontWeight: "600"}}>Analytics</p>
-            </a>
-          </li>
-          <li
-            style={{
-              flexShrink: "0",
-              overflow: "hidden",
-              display: "flex",
-            }}
-          >
-            <Link href="/sens-calculator">
-              <a
-                href=""
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  textDecoration: "none",
-                  overflow: "hidden",
-                  flexShrink: "0",
-                  justifyContent: "start",
-                  color: "white",
-                }}
-              >
-                <FaEnvelope size={30} />
-                <p style={{fontWeight: "600"}}>Sens calculator</p>
-              </a>
-            </Link>
-          </li>
-          <li
-            style={{
-              flexShrink: "0",
-              overflow: "hidden",
-              display: "flex",
-            }}
-          >
-            <Link href="/flow-chart">
+              <Link href="">
+                <a
+                  href=""
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    textDecoration: "none",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                    justifyContent: "start",
+                    color: "white",
+                  }}
+                >
+                  <FaHome size={30} />
+                  <p style={{fontWeight: "600"}}>Home</p>
+                </a>
+              </Link>
+            </li>
+            <li
+              style={{
+                flexShrink: "0",
+                overflow: "hidden",
+                display: "flex",
+              }}
+            >
               <a
                 href=""
                 style={{
@@ -396,88 +337,126 @@ export const Sidebar: React.FC = () => {
                 }}
               >
                 <FaEnvelope size={30} />
-                <p style={{fontWeight: "600"}}>Flow chart</p>
+                <p style={{fontWeight: "600"}}>Analytics</p>
               </a>
-            </Link>
-          </li>
-          <li
+            </li>
+            <li
+              style={{
+                flexShrink: "0",
+                overflow: "hidden",
+                display: "flex",
+              }}
+            >
+              <Link href="/sens-calculator">
+                <a
+                  href=""
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    textDecoration: "none",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                    justifyContent: "start",
+                    color: "white",
+                  }}
+                >
+                  <FaEnvelope size={30} />
+                  <p style={{fontWeight: "600"}}>Sens calculator</p>
+                </a>
+              </Link>
+            </li>
+            <li
+              style={{
+                flexShrink: "0",
+                overflow: "hidden",
+                display: "flex",
+              }}
+            >
+              <Link href="/flow-chart">
+                <a
+                  href=""
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    textDecoration: "none",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                    justifyContent: "start",
+                    color: "white",
+                  }}
+                >
+                  <FaEnvelope size={30} />
+                  <p style={{fontWeight: "600"}}>Flow chart</p>
+                </a>
+              </Link>
+            </li>
+          </ul>
+          <ul
             style={{
-              flexShrink: "0",
+              listStyleType: "none",
               overflow: "hidden",
+              flexShrink: "0",
+              justifyContent: "center",
+              justifySelf: "start",
               display: "flex",
+              flexDirection: "column",
+              padding: "0 20px",
             }}
           >
-            <a
-              href=""
+            <li
               style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                textDecoration: "none",
-                overflow: "hidden",
                 flexShrink: "0",
-                justifyContent: "start",
-                color: "white",
+                overflow: "hidden",
+                display: "flex",
               }}
-              target="_blank"
             >
-              <FaTiktok size={30} />
-              <p style={{fontWeight: "600"}}>Tiktok</p>
-            </a>
-          </li>
-          <li
-            style={{
-              flexShrink: "0",
-              overflow: "hidden",
-              display: "flex",
-            }}
-          >
-            <a
-              href=""
+              <a
+                href=""
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  textDecoration: "none",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                  justifyContent: "start",
+                  color: "white",
+                }}
+                target="_blank"
+              >
+                <FaTiktok size={30} />
+                <p style={{fontWeight: "600"}}>Tiktok</p>
+              </a>
+            </li>
+            <li
               style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                textDecoration: "none",
-                overflow: "hidden",
                 flexShrink: "0",
-                justifyContent: "start",
-                color: "white",
+                overflow: "hidden",
+                display: "flex",
               }}
-              target="_blank"
             >
-              <FaYoutube size={30} />
-              <p style={{fontWeight: "600"}}>Youtube</p>
-            </a>
-          </li>
-        </ul>
-        {/* 
-        <ul className="nav__list">
-          <li className="nav__listitem">
-            <a href="#">
-              <FaHome size={30} />
-              <p>Home</p>
-            </a>
-          </li>
-          <li className="nav__listitem nav__listitem-active">
-            <a href="#">
-              <FaEnvelope size={30} />
-              <p>Analytics</p>
-            </a>
-          </li>
-          <li className="nav__listitem">
-            <a href="#">
-              <FaTiktok size={30} />
-              <p>Tiktok</p>
-            </a>
-          </li>
-          <li className="nav__listitem">
-            <a href="#">
-              <FaYoutube size={30} />
-              <p>Messages</p>
-            </a>
-          </li>
-        </ul> */}
+              <a
+                href=""
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  textDecoration: "none",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                  justifyContent: "start",
+                  color: "white",
+                }}
+                target="_blank"
+              >
+                <FaYoutube size={30} />
+                <p style={{fontWeight: "600"}}>Youtube</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </SidebarContainer>
   );

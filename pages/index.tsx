@@ -5,7 +5,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import {Carousel} from "../components/sections/Carousel";
 import {Sidebar} from "../components/sections/Sidebar";
-import {Navbar} from "../components/Navbar";
 import {Hero} from "../components/sections/Hero";
 
 const Home: NextPage = () => {
@@ -27,7 +26,6 @@ const Home: NextPage = () => {
           height: "100vh",
         }}
       >
-        <Navbar />
         <div style={{display: "flex"}}>
           <Sidebar />
           <div style={{maxWidth: "700px"}}>
