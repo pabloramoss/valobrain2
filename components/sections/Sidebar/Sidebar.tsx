@@ -30,6 +30,11 @@ const SidebarContainer = styled.div<SidebarContainerProps>`
   color: white;
   box-shadow: 10px 0 20px rgb(0 0 0 / 25%);
 
+  .arrow {
+    transform: ${(p) => (p.isOpen ? "rotatez(0deg)" : "rotatez(-180deg)")};
+    transition: transform 400ms ease-in-out;
+  }
+  
   li {
     border-radius: 6px;
     &:hover {
@@ -263,6 +268,7 @@ export const Sidebar: React.FC = () => {
         <h2>Valobrain</h2>
       </div>
       <FaArrowRight
+        className="arrow"
         size={15}
         style={{
           zIndex: "300",

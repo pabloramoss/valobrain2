@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import {Carousel} from "../components/sections/Carousel";
 import {Sidebar} from "../components/sections/Sidebar";
 import {Hero} from "../components/sections/Hero";
+import About from "../components/sections/Hero/About";
 
 const Home: NextPage = () => {
   return (
@@ -31,6 +32,7 @@ const Home: NextPage = () => {
           <div style={{maxWidth: "700px"}}>
             <Hero />
             <Carousel />
+            <About />
           </div>
         </div>
         {/* <MainContent>
