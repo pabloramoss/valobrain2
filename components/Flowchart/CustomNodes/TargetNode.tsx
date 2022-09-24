@@ -7,7 +7,7 @@ import Node, {contentStyle as style} from "./Node";
 const TargetNode = ({data, selected}) => {
   return (
     <Node
-      color={"LemonChiffon"}
+      color={"lightgrey"}
       content={
         // @ts-ignore
         <div style={style.io}>

@@ -45,7 +45,7 @@ const style = {
     padding: "8px 32px",
     flexGrow: 1,
     backgroundColor: "#eee",
-    borderRadius: "5px",
+    borderRadius: "5px 5px 0px 0px",
   },
   contentWrapper: {
     padding: "8px 0px",

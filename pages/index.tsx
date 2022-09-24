@@ -8,7 +8,7 @@ import {Sidebar} from "../components/sections/Sidebar";
 import {Hero} from "../components/sections/Hero";
 import About from "../components/sections/Hero/About";
 import api from "../utils/api";
-import { MicroVideos } from "../types/videos";
+import {MicroVideos} from "../types/videos";
 
 export interface Props {
   videos: MicroVideos[];
