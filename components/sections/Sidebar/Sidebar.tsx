@@ -459,7 +459,8 @@ export const Sidebar: React.FC = () => {
               }}
             >
               <a
-                href="www.youtube.com/channel/UCjg1YvYLP3KbPPdEZ57GJuA"
+                href="https://www.tiktok.com/@valobrain"
+                rel="noreferrer"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -485,7 +486,8 @@ export const Sidebar: React.FC = () => {
               }}
             >
               <a
-                href="www.tiktok.com/@valobrain"
+                href="https://www.youtube.com/channel/UCjg1YvYLP3KbPPdEZ57GJuA"
+                rel="noreferrer"
                 style={{
                   display: "flex",
                   alignItems: "center",

@@ -15,7 +15,8 @@ export interface Props {
 }
 
 const Home: NextPage<Props> = ({videos}) => {
-  console.log(videos)
+  console.log(videos);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -23,7 +24,6 @@ const Home: NextPage<Props> = ({videos}) => {
         <meta content="Valorant Strat App" name="Valobrain" />
         <link href="/favicon.ico" rel="icon" />
       </Head>
-
       <main
         style={{
           display: "flex",
@@ -53,12 +53,13 @@ const Home: NextPage<Props> = ({videos}) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const videos = await api.list()
+  const videos = await api.list();
+
   return {
     props: {
       videos,
-    }
-  }
-}
+    },
+  };
+};
 
 export default Home;
