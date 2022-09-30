@@ -42,7 +42,7 @@ const SidebarContainer = styled.div<SidebarContainerProps>`
     }
   }
 
-  a {
+  .sidebar-links {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -124,7 +124,19 @@ export const Sidebar: React.FC = () => {
               }}
             >
               <Link href="">
-                <a href="">
+                <a
+                  href=""
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    textDecoration: "none",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                    justifyContent: "start",
+                    color: "white",
+                  }}
+                >
                   <FaHome size={30} />
                   <p style={{fontWeight: "600"}}>Home</p>
                 </a>
@@ -139,7 +151,19 @@ export const Sidebar: React.FC = () => {
               }}
             >
               <Link href="/micro-strats">
-                <a href="">
+                <a
+                  href=""
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    textDecoration: "none",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                    justifyContent: "start",
+                    color: "white",
+                  }}
+                >
                   <FaTv size={30} />
                   <p style={{fontWeight: "600"}}>Micro strats</p>
                 </a>
@@ -154,7 +178,19 @@ export const Sidebar: React.FC = () => {
               }}
             >
               <Link href="/sens-calculator">
-                <a href="">
+                <a
+                  href=""
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    textDecoration: "none",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                    justifyContent: "start",
+                    color: "white",
+                  }}
+                >
                   <FaCalculator size={30} />
                   <p style={{fontWeight: "600"}}>Sens calculator</p>
                 </a>
@@ -169,7 +205,19 @@ export const Sidebar: React.FC = () => {
               }}
             >
               <Link href="/flow-chart">
-                <a href="">
+                <a
+                  href=""
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    textDecoration: "none",
+                    overflow: "hidden",
+                    flexShrink: "0",
+                    justifyContent: "start",
+                    color: "white",
+                  }}
+                >
                   <FaProjectDiagram size={30} />
                   <p style={{fontWeight: "600"}}>Flow chart</p>
                 </a>
@@ -183,7 +231,19 @@ export const Sidebar: React.FC = () => {
                 padding: "0 10px",
               }}
             >
-              <a href="">
+              <a
+                href=""
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  textDecoration: "none",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                  justifyContent: "start",
+                  color: "white",
+                }}
+              >
                 <FaEnvelope size={30} />
                 <p style={{fontWeight: "600"}}>Support</p>
               </a>
@@ -209,7 +269,21 @@ export const Sidebar: React.FC = () => {
                 padding: "0 10px",
               }}
             >
-              <a href="https://www.tiktok.com/@valobrain" rel="noreferrer" target="_blank">
+              <a
+                href="https://www.tiktok.com/@valobrain"
+                rel="noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  textDecoration: "none",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                  justifyContent: "start",
+                  color: "white",
+                }}
+                target="_blank"
+              >
                 <FaTiktok size={30} />
                 <p style={{fontWeight: "600"}}>Tiktok</p>
               </a>
@@ -225,6 +299,16 @@ export const Sidebar: React.FC = () => {
               <a
                 href="https://www.youtube.com/channel/UCjg1YvYLP3KbPPdEZ57GJuA"
                 rel="noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  textDecoration: "none",
+                  overflow: "hidden",
+                  flexShrink: "0",
+                  justifyContent: "start",
+                  color: "white",
+                }}
                 target="_blank"
               >
                 <FaYoutube size={30} />
