@@ -11,34 +11,12 @@ const FlowChart: NextPage = () => {
   const ref = useRef(null);
   const refButton = useRef(null);
 
-  const persona = "agustin";
-
-  interface Product {
-    id: string;
-    title: string;
-    price: number;
-  }
-
-  const MiProduct = {
-    id: "1",
-    title: "razer mini",
-    price: 35,
-  };
-
-  console.log(MiProduct.title);
-
-  const hola = (persona: string) => {
-    return persona;
-  };
-
   const handleEdit = (event: React.MouseEvent<any>) => {
-    console.log("aluco", event.currentTarget);
     // if (event.currentTarget.id === "buttoncito") {
     //   console.log("if");
     //   setIsEditable(false);
     // } else {
     //   console.log("else");
-
     //   setIsEditable(true);
     //   //@ts-ignore
     //   ref.current.focus();
