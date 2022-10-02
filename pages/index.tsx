@@ -42,11 +42,6 @@ const Home: NextPage<Props> = ({videos}) => {
             <About />
           </div>
         </div>
-        {/* <MainContent>
-          <Hero />
-          <CarouselMaps />
-          <CarouselVideos />
-        </MainContent> */}
       </main>
     </div>
   );
