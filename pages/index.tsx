@@ -18,7 +18,7 @@ const Home: NextPage<Props> = ({videos}) => {
   console.log(videos);
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Valobrain</title>
         <meta content="Valorant Strat App" name="Valobrain" />

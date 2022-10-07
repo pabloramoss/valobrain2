@@ -27,7 +27,7 @@ const MicroStrats: NextPage = () => {
       >
         <div style={{display: "flex"}}>
           {/* <Sidebar /> */}
-          <div style={{width: "700px"}}>
+          <div style={{width: "700px", display: "wrap"}}>
             <Maps />
           </div>
         </div>
