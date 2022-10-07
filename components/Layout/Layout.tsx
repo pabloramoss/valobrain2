@@ -1,5 +1,8 @@
 import React from "react";
 
+import {Sidebar} from "../sections/Sidebar";
+import {SidebarTest} from "../sections/Sidebar/SidebarTest";
+
 import LayoutHead, {LayoutHeadProps} from "./LayoutHead";
 
 interface LayoutProps {
@@ -13,20 +16,25 @@ const Layout: React.FC<LayoutProps> = (props) => {
 
   return (
     <>
-      <div role="main" style={{display: "flex", flexDirection: "column"}}>
-        {/* SEO Head */}
-        <LayoutHead {...headProps} />
-
-        {/* Navbar */}
-        {`<Navbar />`}
-
-        {/* Main Content */}
-        <div style={{display: "flex", flexDirection: "column", width: "100%"}}>
-          {children}
-          {/* Footer */}
-          {`<Footer />`}
+      {/* SEO Head */}
+      <LayoutHead {...headProps} />
+      <main
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "#2D3748",
+          height: "100vh",
+        }}
+      >
+        <div style={{display: "flex"}}>
+          {/* <Sidebar /> */}
+          <SidebarTest />
+          {/* Main Content */}
+          <div style={{maxWidth: "700px"}}>{children}</div>
         </div>
-      </div>
+      </main>
     </>
   );
 };
