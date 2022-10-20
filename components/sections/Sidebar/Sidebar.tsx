@@ -123,7 +123,7 @@ export const Sidebar: React.FC = () => {
                 padding: "0 10px",
               }}
             >
-              <Link href="">
+              <Link href="/">
                 <a
                   href=""
                   style={{
@@ -152,7 +152,6 @@ export const Sidebar: React.FC = () => {
             >
               <Link href="/micro-strats">
                 <a
-                  href=""
                   style={{
                     display: "flex",
                     alignItems: "center",

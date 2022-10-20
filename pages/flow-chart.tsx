@@ -13,13 +13,11 @@ const FlowChart: NextPage = () => {
   const refButton = useRef(null);
 
   const handleEdit = (event: React.MouseEvent<any>) => {
-    console.log("aluco", event.currentTarget);
     // if (event.currentTarget.id === "buttoncito") {
     //   console.log("if");
     //   setIsEditable(false);
     // } else {
     //   console.log("else");
-
     //   setIsEditable(true);
     //   //@ts-ignore
     //   ref.current.focus();
