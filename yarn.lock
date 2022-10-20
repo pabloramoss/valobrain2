@@ -263,6 +263,50 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
+"@reactflow/background@11.0.2":
+  "integrity" "sha512-Q+f51tQprPs2EqtHyHZaInY8aS4zXXvuQrhQzkX+xonDFmcF/4WMd6Sax/OsZmIzC/reupG+rcH9uE/uyaKF6Q=="
+  "resolved" "https://registry.npmjs.org/@reactflow/background/-/background-11.0.2.tgz"
+  "version" "11.0.2"
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@reactflow/core" "11.1.1"
+    "classcat" "^5.0.3"
+    "zustand" "^4.1.1"
+
+"@reactflow/controls@11.0.2":
+  "integrity" "sha512-oS2wmQwET7n2s7vai77jUGaChmiR8A2fsSoavF4FnCyaZzD3y++fwXSqz/ccBYEdgWH7dsV3JIyIG0iqSEg80A=="
+  "resolved" "https://registry.npmjs.org/@reactflow/controls/-/controls-11.0.2.tgz"
+  "version" "11.0.2"
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@reactflow/core" "11.1.1"
+    "classcat" "^5.0.3"
+
+"@reactflow/core@11.1.1":
+  "integrity" "sha512-dyC2YkMOvbKIlnB/ANsvaTX0sjvC5frXSu9sZdD2JwhSY0wDIvwqx3nLYX+34urF+vpSUVDe0LHSuGPY5fvBJA=="
+  "resolved" "https://registry.npmjs.org/@reactflow/core/-/core-11.1.1.tgz"
+  "version" "11.1.1"
+  dependencies:
+    "@types/d3" "^7.4.0"
+    "@types/d3-drag" "^3.0.1"
+    "@types/d3-selection" "^3.0.3"
+    "@types/d3-zoom" "^3.0.1"
+    "classcat" "^5.0.3"
+    "d3-drag" "^3.0.0"
+    "d3-selection" "^3.0.0"
+    "d3-zoom" "^3.0.0"
+    "zustand" "^4.1.1"
+
+"@reactflow/minimap@11.0.2":
+  "integrity" "sha512-nS5d3i9VK/BZw4ElhN3ku0gsfWdSNuBktR2oAWOFes2EsRxAKs6yiQAS/vDE1PsqflWCWkOBKB+SqJ/1b9TXfQ=="
+  "resolved" "https://registry.npmjs.org/@reactflow/minimap/-/minimap-11.0.2.tgz"
+  "version" "11.0.2"
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@reactflow/core" "11.1.1"
+    "classcat" "^5.0.3"
+    "zustand" "^4.1.1"
+
 "@rushstack/eslint-patch@^1.1.3":
   "integrity" "sha512-LwzQKA4vzIct1zNZzBmRKI9QuNpLgTQMEjsQLf3BXuGYb3QPTP4Yjf6mkdX+X1mYttZ808QpOwAzZjv28kq7DA=="
   "resolved" "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.1.4.tgz"
@@ -322,7 +366,7 @@
   "resolved" "https://registry.npmjs.org/@types/d3-dispatch/-/d3-dispatch-3.0.1.tgz"
   "version" "3.0.1"
 
-"@types/d3-drag@*":
+"@types/d3-drag@*", "@types/d3-drag@^3.0.1":
   "integrity" "sha512-o1Va7bLwwk6h03+nSM8dpaGEYnoIG19P0lKqlic8Un36ymh9NSkNFX1yiXMKNMx8rJ0Kfnn2eovuFaL6Jvj0zA=="
   "resolved" "https://registry.npmjs.org/@types/d3-drag/-/d3-drag-3.0.1.tgz"
   "version" "3.0.1"
@@ -407,7 +451,7 @@
   dependencies:
     "@types/d3-time" "*"
 
-"@types/d3-selection@*":
+"@types/d3-selection@*", "@types/d3-selection@^3.0.3":
   "integrity" "sha512-Mw5cf6nlW1MlefpD9zrshZ+DAWL4IQ5LnWfRheW6xwsdaWOb6IRRu2H7XPAQcyXEx1D7XQWgdoKR83ui1/HlEA=="
   "resolved" "https://registry.npmjs.org/@types/d3-selection/-/d3-selection-3.0.3.tgz"
   "version" "3.0.3"
@@ -441,7 +485,7 @@
   dependencies:
     "@types/d3-selection" "*"
 
-"@types/d3-zoom@*":
+"@types/d3-zoom@*", "@types/d3-zoom@^3.0.1":
   "integrity" "sha512-7s5L9TjfqIYQmQQEUcpMAcBOahem7TRoSO/+Gkz02GbMVuULiZzjF2BOdw291dbO2aNon4m2OdFsRGaCq2caLQ=="
   "resolved" "https://registry.npmjs.org/@types/d3-zoom/-/d3-zoom-3.0.1.tgz"
   "version" "3.0.1"
@@ -2167,7 +2211,7 @@
   "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   "version" "1.2.3"
 
-"react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>= 16.8.0", "react-dom@16 || 17 || 18", "react-dom@18.2.0":
+"react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>= 16.8.0", "react-dom@>=17", "react-dom@16 || 17 || 18", "react-dom@18.2.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -2199,12 +2243,22 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
-"react@*", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^18.2.0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16.8", "react@16 || 17 || 18", "react@18.2.0":
+"react@*", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^18.2.0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16.8", "react@>=17", "react@16 || 17 || 18", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
   dependencies:
     "loose-envify" "^1.1.0"
+
+"reactflow@^11.1.1":
+  "integrity" "sha512-UTFPHs1MXlIdLOQYMpezOZpZGCCdHBdzMxUSXzSfHT6JoRv9etJvHvDthGf5LEYyQt8kxHnkpyKDjAXdm3NGdA=="
+  "resolved" "https://registry.npmjs.org/reactflow/-/reactflow-11.1.1.tgz"
+  "version" "11.1.1"
+  dependencies:
+    "@reactflow/background" "11.0.2"
+    "@reactflow/controls" "11.0.2"
+    "@reactflow/core" "11.1.1"
+    "@reactflow/minimap" "11.0.2"
 
 "regenerator-runtime@^0.13.4":
   "integrity" "sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA=="
@@ -2563,3 +2617,10 @@
   "integrity" "sha512-PIJDIZKtokhof+9+60cpockVOq05sJzHCriyvaLBmEJixseQ1a5Kdov6fWZfWOu5SK9c+FhH1jU0tntLxRJYMA=="
   "resolved" "https://registry.npmjs.org/zustand/-/zustand-3.7.2.tgz"
   "version" "3.7.2"
+
+"zustand@^4.1.1":
+  "integrity" "sha512-gcRaKchcxFPbImrBb/BKgujOhHhik9YhVpIeP87ETT7uokEe2Szu7KkuZ9ghjtD+/KKkcrRNktR2AiLXPIbKIQ=="
+  "resolved" "https://registry.npmjs.org/zustand/-/zustand-4.1.2.tgz"
+  "version" "4.1.2"
+  dependencies:
+    "use-sync-external-store" "1.2.0"

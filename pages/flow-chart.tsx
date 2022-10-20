@@ -5,31 +5,12 @@ import React, {useRef, useState} from "react";
 
 import styles from "../styles/Home.module.css";
 import {Flowchart} from "../components/Flowchart";
+import {NewFlowchart} from "../components/Flowchart/NewFlowChart";
 
 const FlowChart: NextPage = () => {
   const [isEditable, setIsEditable] = useState(false);
   const ref = useRef(null);
   const refButton = useRef(null);
-
-  const persona = "agustin";
-
-  interface Product {
-    id: string;
-    title: string;
-    price: number;
-  }
-
-  const MiProduct = {
-    id: "1",
-    title: "razer mini",
-    price: 35,
-  };
-
-  console.log(MiProduct.title);
-
-  const hola = (persona: string) => {
-    return persona;
-  };
 
   const handleEdit = (event: React.MouseEvent<any>) => {
     console.log("aluco", event.currentTarget);
@@ -81,6 +62,7 @@ const FlowChart: NextPage = () => {
               hola
             </button>
           </div>
+          {/* <NewFlowchart /> */}
           <Flowchart />
         </main>
       </div>

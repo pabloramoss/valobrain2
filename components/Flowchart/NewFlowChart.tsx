@@ -8,7 +8,7 @@ import ReactFlow, {
   NodeChange,
   Node,
   Edge,
-} from "react-flow-renderer";
+} from "reactflow";
 
 import SourceNode from "./CustomNodes/SourceNode";
 import DefaultNode from "./CustomNodes/DefaultNode";
@@ -47,7 +47,7 @@ const initialEdges = [
   {id: "e2-3", source: "2", target: "3", animated: true},
 ];
 
-export const Flowchart: React.FC = () => {
+export const NewFlowchart: React.FC = () => {
   const [nodes, setNodes] = useState(initialNodes);
   const [edges, setEdges] = useState(initialEdges);
 
