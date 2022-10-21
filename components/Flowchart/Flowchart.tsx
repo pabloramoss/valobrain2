@@ -8,7 +8,7 @@ import ReactFlow, {
   NodeChange,
   Node,
   Edge,
-} from "react-flow-renderer";
+} from "reactflow";
 
 import SourceNode from "./CustomNodes/SourceNode";
 import DefaultNode from "./CustomNodes/DefaultNode";

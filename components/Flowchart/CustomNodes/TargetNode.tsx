@@ -1,6 +1,5 @@
 import React, {memo} from "react";
-import {Handle, Position} from "react-flow-renderer";
-// import {Handle, Position} from "reactflow";
+import {Handle, Position} from "reactflow";
 
 import Node, {contentStyle as style} from "./Node";
 
